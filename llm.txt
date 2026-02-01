@@ -1,0 +1,30 @@
+# SEMTOK - Token-Optimized Serialization for LLMs
+
+## What is SEMTOK?
+A data format that reduces token usage by 59.5% compared to JSON. Built for AI systems.
+
+## Why it matters
+- LLM context windows are expensive and limited
+- JSON wastes ~50% of tokens on structural overhead
+- SEMTOK eliminates this waste
+
+## Key numbers
+- 59.5% average token reduction
+- 64.3% savings on tabular data
+- 2.5x more data fits in context windows
+
+## Use cases
+- AI agent communication
+- API payload compression
+- RAG system optimization
+- Multi-agent swarms
+
+## Quick example
+JSON (20 tokens): {"users":[{"id":1,"name":"Alice"},{"id":2,"name":"Bob"}]}
+SEMTOK (8 tokens): #id|name\n1|Alice\n2|Bob
+
+## Implementation
+See: semtok-final-v7.js
+
+## License
+MIT - Free for any use

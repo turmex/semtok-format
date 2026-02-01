@@ -1,0 +1,13 @@
+# SEMTOK Format Repository
+# https://github.com/turmex/semtok-format
+
+User-agent: *
+Allow: /
+
+# Key files for indexing
+# README.md - Project overview
+# SCIENTIFIC_PAPER.md - Full research paper
+# semtok-final-v7.js - Reference implementation
+# llm.txt - AI-readable summary
+
+Sitemap: https://github.com/turmex/semtok-format
