@@ -1,0 +1,254 @@
+[
+  {
+    "name": "simple_flat",
+    "type": "flat",
+    "data": {
+      "id": 1,
+      "name": "Alice",
+      "email": "alice@example.com",
+      "active": true
+    }
+  },
+  {
+    "name": "config_flat",
+    "type": "flat",
+    "data": {
+      "theme": "dark",
+      "language": "en",
+      "notifications": true,
+      "autoSave": false,
+      "fontSize": 14
+    }
+  },
+  {
+    "name": "users_table",
+    "type": "tabular",
+    "data": {
+      "users": [
+        { "id": 1, "name": "Alice", "role": "admin", "score": 95 },
+        { "id": 2, "name": "Bob", "role": "user", "score": 82 },
+        { "id": 3, "name": "Carol", "role": "user", "score": 78 },
+        { "id": 4, "name": "David", "role": "moderator", "score": 88 }
+      ]
+    }
+  },
+  {
+    "name": "products_table",
+    "type": "tabular",
+    "data": {
+      "products": [
+        { "sku": "A001", "name": "Widget", "price": 9.99, "stock": 100 },
+        { "sku": "A002", "name": "Gadget", "price": 19.99, "stock": 50 },
+        { "sku": "B001", "name": "Doodad", "price": 4.99, "stock": 200 }
+      ]
+    }
+  },
+  {
+    "name": "nested_org",
+    "type": "nested",
+    "data": {
+      "company": {
+        "name": "TechCorp",
+        "departments": {
+          "engineering": {
+            "head": "Alice",
+            "budget": 1000000,
+            "teams": ["frontend", "backend", "devops"]
+          },
+          "sales": {
+            "head": "Bob",
+            "budget": 500000,
+            "regions": ["north", "south", "east", "west"]
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "nested_config",
+    "type": "nested",
+    "data": {
+      "database": {
+        "primary": {
+          "host": "db1.example.com",
+          "port": 5432,
+          "ssl": true
+        },
+        "replica": {
+          "host": "db2.example.com",
+          "port": 5432,
+          "ssl": true
+        }
+      },
+      "cache": {
+        "redis": {
+          "host": "cache.example.com",
+          "port": 6379
+        }
+      }
+    }
+  },
+  {
+    "name": "api_response",
+    "type": "mixed",
+    "data": {
+      "status": "success",
+      "code": 200,
+      "data": {
+        "users": [
+          { "id": 1, "name": "Alice", "email": "alice@test.com" },
+          { "id": 2, "name": "Bob", "email": "bob@test.com" }
+        ],
+        "pagination": {
+          "page": 1,
+          "perPage": 20,
+          "total": 42
+        }
+      },
+      "meta": {
+        "requestId": "abc123",
+        "timestamp": "2024-01-15T10:30:00Z"
+      }
+    }
+  },
+  {
+    "name": "dashboard_data",
+    "type": "mixed",
+    "data": {
+      "summary": {
+        "totalUsers": 1542,
+        "activeToday": 234,
+        "revenue": 45678.90
+      },
+      "topProducts": [
+        { "name": "Pro Plan", "sales": 89, "revenue": 8900 },
+        { "name": "Basic Plan", "sales": 156, "revenue": 4680 },
+        { "name": "Enterprise", "sales": 12, "revenue": 36000 }
+      ],
+      "alerts": [
+        { "level": "warning", "message": "High CPU usage" },
+        { "level": "info", "message": "Backup completed" }
+      ]
+    }
+  },
+  {
+    "name": "special_chars",
+    "type": "edge",
+    "data": {
+      "message": "Hello, \"World\"!",
+      "path": "/path/to/file",
+      "regex": "^[a-z]+$",
+      "url": "https://example.com?foo=bar&baz=qux"
+    }
+  },
+  {
+    "name": "nulls_and_empty",
+    "type": "edge",
+    "data": {
+      "nullValue": null,
+      "emptyString": "",
+      "emptyArray": [],
+      "emptyObject": {},
+      "zero": 0,
+      "falseValue": false
+    }
+  },
+  {
+    "name": "large_table",
+    "type": "tabular",
+    "data": {
+      "records": [
+        { "id": 1, "timestamp": "2024-01-01", "value": 423, "status": "active" },
+        { "id": 2, "timestamp": "2024-01-02", "value": 891, "status": "pending" },
+        { "id": 3, "timestamp": "2024-01-03", "value": 156, "status": "done" },
+        { "id": 4, "timestamp": "2024-01-04", "value": 734, "status": "active" },
+        { "id": 5, "timestamp": "2024-01-05", "value": 502, "status": "pending" },
+        { "id": 6, "timestamp": "2024-01-06", "value": 289, "status": "done" },
+        { "id": 7, "timestamp": "2024-01-07", "value": 967, "status": "active" },
+        { "id": 8, "timestamp": "2024-01-08", "value": 115, "status": "pending" },
+        { "id": 9, "timestamp": "2024-01-09", "value": 643, "status": "done" },
+        { "id": 10, "timestamp": "2024-01-10", "value": 378, "status": "active" },
+        { "id": 11, "timestamp": "2024-01-11", "value": 821, "status": "pending" },
+        { "id": 12, "timestamp": "2024-01-12", "value": 459, "status": "done" },
+        { "id": 13, "timestamp": "2024-01-13", "value": 192, "status": "active" },
+        { "id": 14, "timestamp": "2024-01-14", "value": 706, "status": "pending" },
+        { "id": 15, "timestamp": "2024-01-15", "value": 534, "status": "done" },
+        { "id": 16, "timestamp": "2024-01-16", "value": 867, "status": "active" },
+        { "id": 17, "timestamp": "2024-01-17", "value": 241, "status": "pending" },
+        { "id": 18, "timestamp": "2024-01-18", "value": 598, "status": "done" },
+        { "id": 19, "timestamp": "2024-01-19", "value": 423, "status": "active" },
+        { "id": 20, "timestamp": "2024-01-20", "value": 756, "status": "pending" }
+      ]
+    }
+  },
+  {
+    "name": "deeply_nested",
+    "type": "nested",
+    "data": {
+      "level1": {
+        "level2a": {
+          "level3a": {
+            "value": 1,
+            "name": "deep-a"
+          },
+          "level3b": {
+            "value": 2,
+            "name": "deep-b"
+          }
+        },
+        "level2b": {
+          "level3c": {
+            "items": [1, 2, 3],
+            "active": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "name": "small_object",
+    "type": "flat",
+    "data": {
+      "x": 1,
+      "y": 2
+    }
+  },
+  {
+    "name": "inventory_mixed",
+    "type": "mixed",
+    "data": {
+      "warehouse": {
+        "id": "WH-001",
+        "location": "NYC"
+      },
+      "inventory": [
+        { "item": "chairs", "qty": 50, "unit": "piece" },
+        { "item": "tables", "qty": 25, "unit": "piece" },
+        { "item": "desks", "qty": 10, "unit": "piece" }
+      ],
+      "lastUpdated": "2024-01-15"
+    }
+  },
+  {
+    "name": "user_preferences",
+    "type": "nested",
+    "data": {
+      "user": {
+        "profile": {
+          "name": "John Doe",
+          "avatar": "default.png"
+        },
+        "settings": {
+          "display": {
+            "theme": "dark",
+            "density": "compact"
+          },
+          "privacy": {
+            "shareData": false,
+            "cookies": true
+          }
+        }
+      }
+    }
+  }
+]
